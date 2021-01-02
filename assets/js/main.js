@@ -1,6 +1,5 @@
 /*
  * Zaleva
  * https://zalevastore.com
- * Design by Degiam - https://degiam.github.io
- * Copyright (c) 2020
+ * Copyright (c) 2021
  */

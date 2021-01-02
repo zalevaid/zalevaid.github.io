@@ -1,8 +1,7 @@
 /*
  * Zaleva
  * https://zalevastore.com
- * Design by Degiam - https://degiam.github.io
- * Copyright (c) 2020
+ * Copyright (c) 2021
  */
 
 /* Base */
@@ -11,6 +10,10 @@
 		font-size: .875rem;
 		font-weight: 500;
 		height: 100vh;
+	}
+
+	.btn {
+		font-weight: 500;
 	}
 
 	@-moz-document url-prefix() {
@@ -34,3 +37,21 @@
 			padding-top: 0;
 		}
 	}
+
+/* Icon */
+	.mdi {
+		font-size: 18px;
+		height: 18px;
+		line-height: 1;
+	}
+
+/* Focus */
+	.btn:focus {
+		box-shadow: none;
+	}
+
+/* Opacity */
+	.opacity-5 {
+		opacity: .5;
+	}
+
