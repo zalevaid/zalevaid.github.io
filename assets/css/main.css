@@ -1,0 +1,36 @@
+/*
+ * Zaleva
+ * https://zalevastore.com
+ * Design by Degiam - https://degiam.github.io
+ * Copyright (c) 2020
+ */
+
+/* Base */
+	body {
+		font-family: 'Work Sans', sans-serif;
+		font-size: .875rem;
+		font-weight: 500;
+		height: 100vh;
+	}
+
+	@-moz-document url-prefix() {
+		body {
+			font-weight: 400;
+		}
+	}
+
+/* Maintenance */
+	.maintenance {
+		display: table;
+		width: 100%;
+	}
+	.maintenance main {
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	@media (max-width: 767px) {
+		.maintenance {
+			padding-top: 0;
+		}
+	}
