@@ -67,14 +67,14 @@
 <header>
 	<nav class="navbar navbar-expand-md navbar-light fixed-top py-3 px-md-3 bg-white border-bottom shadow">
 		<div class="container-fluid">
-			<a class="navbar-brand d-inline-block me-md-3 pe-md-3 py-md-3" href="index.html">
+			<a class="navbar-brand d-inline-block me-md-3 pe-md-3 py-md-3" href="/">
 				<picture class="d-flex">
 					<source type="image/svg+xml" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x">
 					<img height="25" loading="lazy" src="assets/img/logo-zaleva.svg" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x" alt="Zaleva">
 				</picture>
 			</a>
 			<div class="order-md-3 d-flex justify-content-end w-lg-75">
-				<a class="btn btn-clear d-flex align-items-center btn-wa" href="https://wa.me/6287838610808?text=Hai%20Zaleva...">
+				<a class="btn btn-clear d-flex align-items-center btn-wa" aria-label="Chat WA" href="https://wa.me/6287838610808?text=Hai%20Zaleva...">
 					<span class="d-none d-lg-block me-lg-2">Chat WA</span>
 					<span class="mdi mdi-whatsapp"></span>
 				</a>
@@ -106,16 +106,6 @@
 							<li><a class="dropdown-item py-2" href="#">Queen 160</a></li>
 							<li><a class="dropdown-item py-2" href="#">King 180</a></li>
 							<li><a class="dropdown-item py-2" href="#">Extra King 200</a></li>
-						</ul>
-					</li>
-					<li class="nav-item mx-lg-2 dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navdown-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Bed Cover
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navdown-2">
-							<li><a class="dropdown-item py-2" href="#">...</a></li>
-							<li><a class="dropdown-item py-2" href="#">...</a></li>
-							<li><a class="dropdown-item py-2" href="#">...</a></li>
 						</ul>
 					</li>
 					<li class="nav-item mx-lg-2">
@@ -439,10 +429,12 @@
 									Single 100
 								</h3>
 							</a>
-							<p class="mb-2 lh-1 opacity-5">
-								100 x 200 x 15
+							<p class="mb-2 lh-1">
+								<span class="badge bg-white text-dark rounded-pill px-3 py-2 mt-1">
+									100 x 200 x 15
+								</span>
 							</p>
-							<p class="mb-0 lh-1 opacity-5">
+							<p class="mb-0 lh-1">
 								<small>1 Sarung Bantal & 1 Sarung Guling</small>
 							</p>
 						</div>
@@ -471,10 +463,12 @@
 									Super Single 120
 								</h3>
 							</a>
-							<p class="mb-2 lh-1 opacity-5">
-								120 x 200 x 20
+							<p class="mb-2 lh-1">
+								<span class="badge bg-white text-dark rounded-pill px-3 py-2 mt-1">
+									120 x 200 x 20
+								</span>
 							</p>
-							<p class="mb-0 lh-1 opacity-5">
+							<p class="mb-0 lh-1">
 								<small>1 Sarung Bantal & 1 Sarung Guling</small>
 							</p>
 						</div>
@@ -503,10 +497,12 @@
 									Queen 160
 								</h3>
 							</a>
-							<p class="mb-2 lh-1 opacity-5">
-								160 x 200 x 20
+							<p class="mb-2 lh-1">
+								<span class="badge bg-white text-dark rounded-pill px-3 py-2 mt-1">
+									160 x 200 x 20
+								</span>
 							</p>
-							<p class="mb-0 lh-1 opacity-5">
+							<p class="mb-0 lh-1">
 								<small>2 Sarung Bantal & 2 Sarung Guling</small>
 							</p>
 						</div>
@@ -535,10 +531,12 @@
 									King 180
 								</h3>
 							</a>
-							<p class="mb-2 lh-1 opacity-5">
-								180 x 200 x 25
+							<p class="mb-2 lh-1">
+								<span class="badge bg-white text-dark rounded-pill px-3 py-2 mt-1">
+									180 x 200 x 25
+								</span>
 							</p>
-							<p class="mb-0 lh-1 opacity-5">
+							<p class="mb-0 lh-1">
 								<small>2 Sarung Bantal & 2 Sarung Guling</small>
 							</p>
 						</div>
@@ -567,10 +565,12 @@
 									Extra King 200
 								</h3>
 							</a>
-							<p class="mb-2 lh-1 opacity-5">
-								200 x 200 x 30
+							<p class="mb-2 lh-1">
+								<span class="badge bg-white text-dark rounded-pill px-3 py-2 mt-1">
+									200 x 200 x 30
+								</span>
 							</p>
-							<p class="mb-0 lh-1 opacity-5">
+							<p class="mb-0 lh-1">
 								<small>2 Sarung Bantal & 2 Sarung Guling</small>
 							</p>
 						</div>
@@ -668,11 +668,20 @@
 		<div class="container mt-3">
 			<div class="row">
 				<div class="col-md-6 col-lg-5 py-3 pe-md-5">
-					<picture>
-						<source type="image/svg+xml" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x">
-						<img class="filter-white mb-4" height="25" loading="lazy" src="assets/img/logo-zaleva.svg" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x" alt="Zaleva">
-					</picture>
-					<p class="opacity-5">Lorem ipsum aliquip pariatur dolore et in excepteur et aute dolore veniam officia sit in. Consequat do sit incididunt et culpa nisi aliquip do eu nulla elit aliqua ut reprehenderit aliquip do eiusmod.</p>
+					<div class="d-flex align-items-center mb-4">
+						<picture>
+							<source type="image/svg+xml" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x">
+							<img class="filter-white" height="50" loading="lazy" src="assets/img/logo-zaleva-z.svg" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x" alt="Zaleva">
+						</picture>
+						<span class="fs-5 text-uppercase lh-1 ms-3">
+							Zaleva
+						</span>
+					</div>
+					<p class="opacity-5">
+						Zaleva memproduksi sprei yang kekinian, berkualitas, lembut dan nyaman untuk keluarga.<br>
+						<br>
+						Melayani pengiriman ke seluruh Indonesia.
+					</p>
 				</div>
 				<div class="col-md-6 col-lg-4 py-3">
 					<p class="fs-6 mb-3 text-uppercase opacity-5">Pembayaran</p>
@@ -727,7 +736,7 @@
 	<section class="bg-darkest text-white">
 		<div class="container-fluid">
 			<div class="text-center p-3">
-				<small>&copy; 2021 <strong>Zaleva</strong> &bullet; All rights reserved</small>
+				<small>&copy; 2021 <a class="text-decoration-none" href="/">ZalevaStore.com</a> &bullet; All rights reserved</small>
 			</div>
 		</div>
 	</section>

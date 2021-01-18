@@ -7,12 +7,10 @@
 
 /* Base */
 	:root {
-		/*--bs-primary: #023466;*/
 		--bs-warning: #ffd400;
+		--bs-info: #05b1d4;
 
 		--bs-darkest: #1b1e21;
-
-		/*--bs-blue-dark: #0853c3;*/
 
 		--bs-dark-main: #212529;
 		--bs-darkest-main: #16181b;
@@ -113,13 +111,9 @@
 	.bg-warning {
 		background-color: var(--bs-warning) !important;
 	}
-	/*.bg-theme {
-		background-color: var(--bs-blue);
-		background: linear-gradient(15deg, var(--bs-blue-dark) 0%, var(--bs-blue) 70%);
+	.bg-info {
+		background-color: var(--bs-info) !important;
 	}
-	.text-theme {
-		color: var(--bs-primary);
-	}*/
 
 /* Hover */
 	.page-link:hover {
