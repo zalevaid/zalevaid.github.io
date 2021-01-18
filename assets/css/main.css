@@ -8,7 +8,6 @@
 /* Base */
 	:root {
 		--bs-warning: #ffd400;
-		--bs-info: #05b1d4;
 
 		--bs-darkest: #1b1e21;
 
@@ -111,8 +110,23 @@
 	.bg-warning {
 		background-color: var(--bs-warning) !important;
 	}
-	.bg-info {
-		background-color: var(--bs-info) !important;
+	.bg-purple {
+		background-color: var(--bs-purple);
+	}
+	.bg-indigo {
+		background-color: var(--bs-indigo);
+	}
+	.bg-teal {
+		background-color: var(--bs-teal);
+	}
+	.bg-pink {
+		background-color: var(--bs-pink);
+	}
+	.bg-cyan {
+		background-color: var(--bs-cyan);
+	}
+	.bg-orange {
+		background-color: var(--bs-orange);
 	}
 
 /* Hover */
