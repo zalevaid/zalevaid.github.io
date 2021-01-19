@@ -94,8 +94,9 @@
 					<span class="mdi mdi-whatsapp"></span>
 				</a>
 				<button class="btn btn-clear d-flex align-items-center btn-dark-mode" type="button" aria-label="Toggle Dark">
-					<label class="d-none d-lg-flex align-items-center cursor-pointer me-lg-2" for="dark-mode">
-						Mode Gelap
+					<label class="d-none d-lg-flex align-items-center cursor-pointer me-lg-2 text-dark-mode" for="dark-mode">
+						<span>Mode Terang</span>
+						<span class="d-none">Mode Gelap</span>
 					</label>
 					<label class="d-flex align-items-center cursor-pointer icon-dark-mode" for="dark-mode">
 						<span class="mdi mdi-lightbulb-outline"></span>
@@ -143,11 +144,6 @@
 	<section>
 		<div class="container-fluid px-0 overflow-hidden">
 			<div id="featured" class="carousel slide carousel-dark mb-4 pb-3" data-bs-ride="carousel" data-bs-interval="5000">
-				<!-- <ol class="carousel-indicators">
-					<li data-bs-target="#featured" data-bs-slide-to="0" class="active"></li>
-					<li data-bs-target="#featured" data-bs-slide-to="1"></li>
-					<li data-bs-target="#featured" data-bs-slide-to="2"></li>
-				</ol> -->
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<picture>
@@ -171,14 +167,6 @@
 						</picture>
 					</div>
 				</div>
-				<!-- <a class="carousel-control-prev" href="#featured" role="button" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#featured" role="button" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</a> -->
 			</div>
 		</div>
 	</section>
@@ -802,13 +790,23 @@
 
 <section>
 	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZT108TB6N"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-1ZT108TB6N');
-	</script>
+	<section id="script">
+		<script defer type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function() {
+				var script = document.getElementById("script")
+					gtag1 = document.createElement("script")
+					gtag1.type = "text/javascript"
+					gtag1.src = "https://www.googletagmanager.com/gtag/js?id=G-1ZT108TB6N"
+					gtag2 = document.createElement("script")
+					gtag2.type = "text/javascript"
+					gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js',new Date()); gtag('config','G-1ZT108TB6N');"
+				setTimeout(function() {
+					script.appendChild(gtag1)
+					script.appendChild(gtag2)
+				},5000)
+			});
+		</script>
+	</section>
 	<!-- Main -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
 	<script src="assets/js/main.js" defer></script>

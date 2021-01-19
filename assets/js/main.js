@@ -6,10 +6,14 @@
  */
 
 // Dark Mode
-	function iconDarkModeToggle() {
-		var icon = document.querySelectorAll('.icon-dark-mode .mdi')
+	function labelDarkModeToggle() {
+		var icon = document.querySelectorAll('.icon-dark-mode span')
 		for (var i = 0; i < icon.length; i++) {
 			icon[i].classList.toggle('d-none')
+		}
+		var text = document.querySelectorAll('.text-dark-mode span')
+		for (var i = 0; i < text.length; i++) {
+			text[i].classList.toggle('d-none')
 		}
 	}
 
@@ -25,7 +29,7 @@
 		var toggle = document.getElementById('dark-mode')
 		if ( toggle !== null ) {
 			toggle.setAttribute('checked','true')
-			iconDarkModeToggle()
+			labelDarkModeToggle()
 			carouselDarkModeToggle()
 		}
 	}
@@ -35,7 +39,7 @@
 		if ( localStorage.getItem('dark') === null ) {
 			body.classList.remove('transition-off')
 			body.classList.add('transition-on')
-			iconDarkModeToggle()
+			labelDarkModeToggle()
 			carouselDarkModeToggle()
 			setTimeout(function() {
 				body.classList.add('dark')
@@ -45,7 +49,7 @@
 		} else {
 			body.classList.remove('transition-on')
 			body.classList.add('transition-off')
-			iconDarkModeToggle()
+			labelDarkModeToggle()
 			carouselDarkModeToggle()
 			setTimeout(function() {
 				body.classList.remove('dark')
