@@ -10,6 +10,13 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Cache -->
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Wed, 01 Jan 2020 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
 	<!-- Open Graph -->
 	<meta property="og:title" content="Zaleva">
 	<meta property="og:description" content="Jual sprei kekinian, berkualitas, lembut dan nyaman untuk keluarga. Bisa dikirim ke seluruh Indonesia.">
@@ -19,10 +26,10 @@
 	<meta property="og:locale" content="id_ID">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Zaleva">
-	<meta property="og:url" content="https://zalevastore.com">
+	<meta property="og:url" content="https://zalevastore.com/test">
 	<meta property="twitter:image" content="assets/img/ogp.jpg">
 	<!-- Canonical -->
-	<link rel="canonical" href="https://zalevastore.com">
+	<link rel="canonical" href="https://zalevastore.com/test">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
 	<!-- Manifest -->
@@ -60,6 +67,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1">
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script>var d=new Date;function addCookie(e,i,o){d.setTime(d.getTime()+24*o*60*60*1e3),document.cookie=e+"="+i+"; expires="+d.toGMTString()}addCookie("visit",d.getTime(),"1");</script>
 </head>
 
 <body>
@@ -68,13 +76,20 @@
 	<nav class="navbar navbar-expand-md navbar-light fixed-top py-3 px-md-3 bg-white border-bottom shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand d-inline-block me-md-3 pe-md-3 py-md-3" href="/">
-				<picture class="d-flex">
+				<div class="d-flex align-items-center d-md-none">
+					<picture class="d-flex">
+						<source type="image/svg+xml" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x">
+						<img height="25" loading="lazy" src="assets/img/logo-zaleva-z.svg" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x" alt="Zaleva">
+					</picture>
+					<span class="lh-1 ms-2 ps-1 text-dark">Store</span>
+				</div>
+				<picture class="d-none d-md-flex">
 					<source type="image/svg+xml" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x">
 					<img height="25" loading="lazy" src="assets/img/logo-zaleva.svg" srcset="assets/img/logo-zaleva.svg 1x, assets/img/logo-zaleva.svg 2x" alt="Zaleva">
 				</picture>
 			</a>
 			<div class="order-md-3 d-flex justify-content-end w-lg-75">
-				<a class="btn btn-clear d-flex align-items-center btn-wa" aria-label="Chat WA" href="https://wa.me/6287838610808?text=Hai%20Zaleva...">
+				<a class="btn btn-clear d-flex align-items-center btn-wa" href="https://wa.me/6287838610808?text=Hai%20Zaleva..." aria-label="Chat WA">
 					<span class="d-none d-lg-block me-lg-2">Chat WA</span>
 					<span class="mdi mdi-whatsapp"></span>
 				</a>
@@ -96,24 +111,24 @@
 			</div>
 			<div class="collapse navbar-collapse" id="menu">
 				<ul class="navbar-nav mt-3 mt-md-0">
-					<li class="nav-item mx-lg-2 dropdown">
+					<li class="nav-item mx-lg-2 my-2 my-md-0 dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navdown-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Sprei
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navdown-1">
-							<li><a class="dropdown-item py-2" href="#">Single 100</a></li>
-							<li><a class="dropdown-item py-2" href="#">Super Single 120</a></li>
-							<li><a class="dropdown-item py-2" href="#">Queen 160</a></li>
-							<li><a class="dropdown-item py-2" href="#">King 180</a></li>
-							<li><a class="dropdown-item py-2" href="#">Extra King 200</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Single 100</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Super Single 120</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Queen 160</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">King 180</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Extra King 200</a></li>
 						</ul>
 					</li>
-					<li class="nav-item mx-lg-2">
+					<li class="nav-item mx-lg-2 my-2 my-md-0">
 						<a class="nav-link" href="#">
 							Testimoni
 						</a>
 					</li>
-					<li class="nav-item mx-lg-2">
+					<li class="nav-item mx-lg-2 my-2 my-md-0">
 						<a class="nav-link" href="#">
 							<strong>Promo</strong>
 						</a>
@@ -125,6 +140,49 @@
 </header>
 
 <main>
+	<section>
+		<div class="container-fluid px-0 overflow-hidden">
+			<div id="featured" class="carousel slide carousel-dark mb-4 pb-3" data-bs-ride="carousel" data-bs-interval="5000">
+				<!-- <ol class="carousel-indicators">
+					<li data-bs-target="#featured" data-bs-slide-to="0" class="active"></li>
+					<li data-bs-target="#featured" data-bs-slide-to="1"></li>
+					<li data-bs-target="#featured" data-bs-slide-to="2"></li>
+				</ol> -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<picture>
+							<source type="webp" srcset="assets/img/image-landscape.webp 1x, assets/img/image-landscape.webp 2x">
+							<source type="jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x">
+							<img class="w-100 object-fit-cover" loading="lazy" src="assets/img/image-landscape.jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x" alt="Banner">
+						</picture>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source type="webp" srcset="assets/img/image-landscape.webp 1x, assets/img/image-landscape.webp 2x">
+							<source type="jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x">
+							<img class="w-100 object-fit-cover" loading="lazy" src="assets/img/image-landscape.jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x" alt="Banner">
+						</picture>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source type="webp" srcset="assets/img/image-landscape.webp 1x, assets/img/image-landscape.webp 2x">
+							<source type="jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x">
+							<img class="w-100 object-fit-cover" loading="lazy" src="assets/img/image-landscape.jpg" srcset="assets/img/image-landscape.jpg 1x, assets/img/image-landscape.jpg 2x" alt="Banner">
+						</picture>
+					</div>
+				</div>
+				<!-- <a class="carousel-control-prev" href="#featured" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#featured" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</a> -->
+			</div>
+		</div>
+	</section>
+
 	<section class="my-5">
 		<div class="container">
 			<div class="text-center mb-4">
@@ -673,9 +731,9 @@
 							<source type="image/svg+xml" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x">
 							<img class="filter-white" height="50" loading="lazy" src="assets/img/logo-zaleva-z.svg" srcset="assets/img/logo-zaleva-z.svg 1x, assets/img/logo-zaleva-z.svg 2x" alt="Zaleva">
 						</picture>
-						<span class="fs-5 fw-bold text-uppercase lh-1 ms-3">
+						<h1 class="fs-5 fw-bold text-uppercase lh-1 ls-normal ms-3 mb-0">
 							Zaleva Store
-						</span>
+						</h1>
 					</div>
 					<p class="opacity-5">
 						Zaleva memproduksi sprei yang kekinian, berkualitas, lembut dan nyaman untuk keluarga.<br>
@@ -743,6 +801,14 @@
 </footer>
 
 <section>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZT108TB6N"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-1ZT108TB6N');
+	</script>
 	<!-- Main -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
 	<script src="assets/js/main.js" defer></script>
