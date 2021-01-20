@@ -385,6 +385,7 @@
 		}
 	}
 	.icon-dark-mode {
+		margin-top: -2px;
 		transform: rotate(180deg);
 	}
 	.btn-wa {
