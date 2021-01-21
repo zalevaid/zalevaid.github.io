@@ -1,0 +1,8 @@
+Sitemap: https://zalevastore.com/sitemap.xml
+
+User-agent: *
+
+Allow: /
+Allow: /produk
+
+Disallow: /test
