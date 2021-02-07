@@ -5,4 +5,5 @@ User-agent: *
 Allow: /
 Allow: /produk
 
+Disallow: /detail
 Disallow: /test

@@ -1,0 +1,292 @@
+produk =`[
+	{
+		"id"			: "#0001",
+		"title"			: "Sprei Abstrak",
+		"price"			: "Rp 100.000",
+		"category"		: "Single 100",
+		"description"	: "Fugiat quis esse in ex nulla aliquip amet dolor nulla cupidatat ut in commodo elit laborum do dolore pariatur. Nulla sit pariatur laborum minim officia exercitation aliquip in exercitation adipisicing sed aliquip cupidatat aliqua anim dolore.",
+		"badge"			: "bg-pink",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CKlc8p1J_EW"
+		}
+	},
+	{
+		"id"			: "#0002",
+		"title"			: "Sprei Kucing",
+		"price"			: "Rp 120.000",
+		"category"		: "Super Single 120",
+		"description"	: "Qui aliquip adipisicing enim aliquip laboris dolore reprehenderit dolor sint nisi eiusmod do voluptate ut aliqua dolore deserunt id. Velit occaecat pariatur id ut qui cupidatat et amet veniam.",
+		"badge"			: "bg-purple",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CKgU7Gyp4aR"
+		}
+	},
+	{
+		"id"			: "#0003",
+		"title"			: "Sprei Bebek",
+		"price"			: "Rp 160.000",
+		"category"		: "Queen 160",
+		"description"	: "Aliquip minim sint laborum ullamco consectetur reprehenderit occaecat tempor deserunt voluptate nostrud qui dolore est ea aliquip. Occaecat anim cillum minim in pariatur magna ex ut deserunt.",
+		"badge"			: "bg-primary",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcPAzvHdJw"
+		}
+	},
+	{
+		"id"			: "#0004",
+		"title"			: "Sprei Pantai",
+		"price"			: "Rp 180.000",
+		"category"		: "King 180",
+		"description"	: "Lorem ipsum dolor velit sit in culpa ut et reprehenderit tempor cupidatat cupidatat enim. In ex reprehenderit cillum cupidatat dolor ad aliquip mollit voluptate elit laboris.",
+		"badge"			: "bg-success",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcN7dFn_lG"
+		}
+	},
+	{
+		"id"			: "#0005",
+		"title"			: "Sprei Polkadot",
+		"price"			: "Rp 200.000",
+		"category"		: "Extra King 200",
+		"description"	: "Esse in duis ea consequat nisi velit quis reprehenderit officia velit. Fugiat in eiusmod aliquip ullamco reprehenderit laborum non nisi exercitation officia ullamco ullamco elit aute proident sit.",
+		"badge"			: "bg-orange",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcNr_cniGY"
+		}
+	},
+	{
+		"id"			: "#0006",
+		"title"			: "Sprei Abstrak",
+		"price"			: "Rp 100.000",
+		"category"		: "Single 100",
+		"description"	: "Fugiat nostrud elit dolore eu voluptate dolore do velit culpa cillum id aute occaecat laboris quis. Aliquip nostrud ut nulla incididunt ea elit consequat ut non ad ea.",
+		"badge"			: "bg-pink",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CKlc8p1J_EW"
+		}
+	},
+	{
+		"id"			: "#0007",
+		"title"			: "Sprei Kucing",
+		"price"			: "Rp 120.000",
+		"category"		: "Super Single 120",
+		"description"	: "Duis labore sed nulla tempor culpa irure commodo deserunt. Nulla minim deserunt cupidatat sit aliquip elit tempor velit dolore ex non et deserunt amet do sunt aute.",
+		"badge"			: "bg-purple",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CKgU7Gyp4aR"
+		}
+	},
+	{
+		"id"			: "#0008",
+		"title"			: "Sprei Bebek",
+		"price"			: "Rp 160.000",
+		"category"		: "Queen 160",
+		"description"	: "Veniam ut id laborum ut quis nostrud occaecat laboris nulla sed voluptate. Enim magna non quis adipisicing non fugiat non deserunt ex sed in tempor.",
+		"badge"			: "bg-primary",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcPAzvHdJw"
+		}
+	},
+	{
+		"id"			: "#0009",
+		"title"			: "Sprei Pantai",
+		"price"			: "Rp 180.000",
+		"category"		: "King 180",
+		"description"	: "Dolore consequat magna sit ea ut laboris eu est sed magna. Non tempor amet aliquip exercitation do in aliquip enim voluptate aliquip proident aute sed.",
+		"badge"			: "bg-success",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcN7dFn_lG"
+		}
+	},
+	{
+		"id"			: "#0010",
+		"title"			: "Sprei Polkadot",
+		"price"			: "Rp 200.000",
+		"category"		: "Extra King 200",
+		"description"	: "Mollit nisi sunt ut in reprehenderit cupidatat in dolor duis enim duis pariatur ut commodo adipisicing tempor esse. Lorem ipsum non veniam nostrud quis magna deserunt officia labore consequat in voluptate consectetur nisi dolor velit laboris sed sint do.",
+		"badge"			: "bg-orange",
+		"image"			: {
+			"src0"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src1"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src2"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			},
+			"src3"			: {
+				"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+				"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+			}
+		},
+		"link"			: {
+			"instagram"	: "CGcNr_cniGY"
+		}
+	}
+]`

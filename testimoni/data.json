@@ -1,0 +1,29 @@
+testimoni =`[
+	{
+		"name"		: "Dinar",
+		"address"	: "Jakarta",
+		"content"	: "Id proident non in eu deserunt velit proident qui exercitation sunt",
+		"image"		: {
+			"jpg"		: "1r9TaK9OH2XbteK8PHCwh31tVghiEL2q0",
+			"webp"		: "1jQJG8glI5_ytpAwAbjZL6vVFER2GhiRX"
+		}
+	},
+	{
+		"name"		: "Anastasya",
+		"address"	: "Semarang",
+		"content"	: "Reprehenderit ad laboris aliquip pariatur elit qui consectetur nulla",
+		"image"		: {
+			"jpg"		: "1r9TaK9OH2XbteK8PHCwh31tVghiEL2q0",
+			"webp"		: "1jQJG8glI5_ytpAwAbjZL6vVFER2GhiRX"
+		}
+	},
+	{
+		"name"		: "Rachel",
+		"address"	: "Surabaya",
+		"content"	: "Anim deserunt in ad sunt dolor duis dolor cupidatat fugiat duis in",
+		"image"		: {
+			"jpg"		: "1r9TaK9OH2XbteK8PHCwh31tVghiEL2q0",
+			"webp"		: "1jQJG8glI5_ytpAwAbjZL6vVFER2GhiRX"
+		}
+	}
+]`

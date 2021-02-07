@@ -1,0 +1,23 @@
+slideshow =`[
+	{
+		"title"		: "Banner Slider 1",
+		"image"		: {
+			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
+			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
+		}
+	},
+	{
+		"title"		: "Banner Slider 2",
+		"image"		: {
+			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
+			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
+		}
+	},
+	{
+		"title"		: "Banner Slider 3",
+		"image"		: {
+			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
+			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
+		}
+	}
+]`

@@ -1,0 +1,62 @@
+kategori =`[
+	{
+		"title"		: "Extra King 200",
+		"size"		: "200 x 200 x 30",
+		"label"		: "2 Sarung Bantal & 2 Sarung Guling",
+		"image"		: {
+			"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+			"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+		},
+		"link"		: {
+			"detail"	: "extra-king-200"
+		}
+	},
+	{
+		"title"		: "King 180",
+		"size"		: "180 x 200 x 25",
+		"label"		: "2 Sarung Bantal & 2 Sarung Guling",
+		"image"		: {
+			"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+			"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+		},
+		"link"		: {
+			"detail"	: "king-180"
+		}
+	},
+	{
+		"title"		: "Queen 160",
+		"size"		: "160 x 200 x 20",
+		"label"		: "2 Sarung Bantal & 2 Sarung Guling",
+		"image"		: {
+			"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+			"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+		},
+		"link"		: {
+			"detail"	: "queen-160"
+		}
+	},
+	{
+		"title"		: "Super Single 120",
+		"size"		: "120 x 200 x 20",
+		"label"		: "1 Sarung Bantal & 1 Sarung Guling",
+		"image"		: {
+			"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+			"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+		},
+		"link"		: {
+			"detail"	: "super-single-120"
+		}
+	},
+	{
+		"title"		: "Single 100",
+		"size"		: "100 x 200 x 15",
+		"label"		: "1 Sarung Bantal & 1 Sarung Guling",
+		"image"		: {
+			"jpg"		: "1nkYIbCzvsrTzqNpJVyYFP812gb_xyr8u",
+			"webp"		: "1bYuXwW15-A1WQyk4ME2egSCW7sbTv0xS"
+		},
+		"link"		: {
+			"detail"	: "single-100"
+		}
+	}
+]`
