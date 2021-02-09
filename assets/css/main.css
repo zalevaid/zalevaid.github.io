@@ -442,6 +442,18 @@
 		opacity: .5;
 	}
 
+/* Breadcrumb */
+	.breadcrumb li.active,
+	.breadcrumb a {
+		color: var(--ds-dark);
+	}
+	.breadcrumb a {
+		text-decoration: none;
+	}
+	.breadcrumb a:hover {
+		color: var(--bs-primary);
+	}
+
 /* Size */
 	@media (min-width: 992px) {
 		.w-lg-75 {
