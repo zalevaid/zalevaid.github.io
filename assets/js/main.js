@@ -472,6 +472,7 @@
 							svg = na.querySelector('[type="image/svg+xml"]')
 							img = na.querySelector('img')
 							src = '../assets/img/image-default.svg'
+							productBreadcrumb = document.querySelector('.breadcrumb-item.active')
 
 						// Unavailable Title
 						if ( title !== null ) title.innerText = 'Maaf...'
@@ -493,6 +494,9 @@
 							img.src = src
 							img.alt = 'Produk tidak tersedia'
 						}
+
+						// Breadcrumb
+						if ( productBreadcrumb !== null ) productBreadcrumb.innerText = 'Tidak Tersedia'
 
 					}
 				}
