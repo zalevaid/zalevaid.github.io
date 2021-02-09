@@ -88,7 +88,7 @@
 					<img height="25" loading="lazy" src="../assets/img/logo-zaleva.svg" srcset="../assets/img/logo-zaleva.svg 1x, ../assets/img/logo-zaleva.svg 2x" alt="Zaleva">
 				</picture>
 			</a>
-			<div class="order-md-3 d-flex justify-content-end w-lg-75">
+			<div class="order-md-3 d-flex justify-content-end w-lg-75 me-n2">
 				<a class="btn btn-clear d-flex align-items-center btn-wa" href="https://wa.me/6287838610808?text=Hai%20Zaleva..." aria-label="Chat WA">
 					<span class="d-none d-lg-block me-lg-2">Chat WA</span>
 					<span class="mdi mdi-whatsapp"></span>
@@ -117,11 +117,11 @@
 							Sprei
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navdown-1">
-							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Single 100</a></li>
-							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Super Single 120</a></li>
-							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Queen 160</a></li>
-							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">King 180</a></li>
-							<li><a class="dropdown-item py-2 my-2 my-md-0" href="#">Extra King 200</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/kategori?single-100">Single 100</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/kategori?super-single-120">Super Single 120</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/kategori?queen-160">Queen 160</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/kategori?king-180">King 180</a></li>
+							<li><a class="dropdown-item py-2 my-2 my-md-0" href="/kategori?extra-king-200">Extra King 200</a></li>
 						</ul>
 					</li>
 					<li class="nav-item mx-lg-2 my-2 my-md-0">
@@ -143,6 +143,19 @@
 <main>
 	<section>
 		<script id="productData" src="data.json"></script>
+		<script id="productCategory" src="../kategori/data.json"></script>
+	</section>
+
+	<section class="my-5">
+		<div class="container">
+			<nav class="opacity-5" aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/">Beranda</a></li>
+					<li class="breadcrumb-item"><a href="/produk/">Produk</a></li>
+					<li class="breadcrumb-item active" aria-current="page"></li>
+				</ol>
+			</nav>
+		</div>
 	</section>
 
 	<section class="my-5" id="productDetail">
@@ -222,6 +235,19 @@
 					</div>
 
 					<p class="product-description mb-1"></p>
+
+					<table class="table table-stripped mt-4 border-top">
+						<tbody>
+							<tr>
+								<td class="ps-0 opacity-5" style="width:110px">Kelengkapan</td>
+								<td class="pe-0"><span class="product-category-label"></span></td>
+							</tr>
+							<tr>
+								<td class="ps-0 opacity-5">Ukuran</td>
+								<td class="pe-0"><span class="product-category-size"></span></td>
+							</tr>
+						</tbody>
+					</table>
 
 					<div class="d-md-flex align-items-center justify-content-between my-3">
 						<div class="order-md-2">

@@ -273,6 +273,7 @@
 							productLink = document.querySelector('.product-link')
 							productWhatsapp = document.querySelector('.product-whatsapp')
 							productInstagram = document.querySelector('.product-instagram')
+							productBreadcrumb = document.querySelector('.breadcrumb-item.active')
 
 						// Product ID
 						if ( productID !== null ) productID.innerText = id
@@ -304,6 +305,22 @@
 							}
 
 							productCategory.classList.add(badge)
+
+							// Get category specification
+							if ( document.querySelector('#productCategory') !== null ) {
+								// Parse JSON data
+								let categories = JSON.parse(kategori)
+
+								// Loop JSON data
+								for (let c = 0; c < categories.length; c++) {
+									if ( category == categories[c].title ) {
+										let categoriesSize = document.querySelector('.product-category-size')
+											categoriesLabel = document.querySelector('.product-category-label')
+										if ( categoriesSize !== null ) categoriesSize.innerText = categories[c].size
+										if ( categoriesLabel !== null ) categoriesLabel.innerText = categories[c].label
+									}
+								}
+							}
 						}
 
 						// Product Image
@@ -432,6 +449,9 @@
 						// Instagram
 						if ( productInstagram !== null ) productInstagram.href = 'https://www.instagram.com/p/' + instagram
 
+						// Breadcrumb
+						if ( productBreadcrumb !== null ) productBreadcrumb.innerText = title
+
 						break
 
 					} else if ( product[i].id == lastItem.id ) {
@@ -485,18 +505,18 @@
 // Category
 	if ( document.querySelector('#categoryData') !== null ) {
 		// Parse JSON data
-		var category = JSON.parse(kategori)
+		var categories = JSON.parse(kategori)
 
 		// Loop JSON data
-		for (let i = 0; i < category.length; i++) {
+		for (let i = 0; i < categories.length; i++) {
 
 			// Define JSON data
-			let title = category[i].title
-				size = category[i].size
-				label = category[i].label
-				jpg = category[i].image.jpg
-				webp = category[i].image.webp
-				detail = category[i].link.detail
+			let title = categories[i].title
+				size = categories[i].size
+				label = categories[i].label
+				jpg = categories[i].image.jpg
+				webp = categories[i].image.webp
+				detail = categories[i].link.detail
 
 			// Duplicate DOM element
 			let list = document.querySelector('.category-list')
@@ -538,7 +558,7 @@
 			}
 
 			// Category Link
-			let link = '/' + detail
+			let link = '/produk?' + detail
 			if ( categoryTitle !== null ) categoryTitle.href = link
 			if ( categoryImage !== null ) categoryImage.href = link
 			if ( categoryLink !== null ) categoryLink.href = link
