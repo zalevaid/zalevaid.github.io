@@ -193,8 +193,11 @@
 
 					let categoryName = category.split(' ')
 						categorySize = categoryName[categoryName.length - 1]
+						categoryLabel = category.substring(0, category.lastIndexOf(' '))
 						categoriesSize = document.querySelector('.product-category-size')
+						categoriesLabel = document.querySelector('.product-category-label')
 					if ( categoriesSize !== null ) categoriesSize.innerText = categorySize
+					if ( categoriesLabel !== null ) categoriesLabel.innerText = categoryLabel
 				}
 
 				// Product Image
@@ -238,7 +241,7 @@
 						listjs1 = document.createElement('script')
 						listjs1.src = 'https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js'
 						listjs2 = document.createElement('script')
-						listjs2.innerHTML = 'var userList = new List("filter", { valueNames: ["filter-title", "filter-price", "filter-size"], page: 8, pagination: [{ paginationClass: "filter-pagination", left: 2, right: 2, item: `<li><a class="page" onclick="hrefPagin()"></a></li>` }] })'
+						listjs2.innerHTML = 'var userList = new List("filter", { valueNames: ["filter-title", "filter-price", "filter-label", "filter-size"], page: 8, pagination: [{ paginationClass: "filter-pagination", left: 2, right: 2, item: `<li><a class="page" onclick="hrefPagin()"></a></li>` }] })'
 					listjs.appendChild(listjs1)
 					setTimeout(function() {
 						listjs.appendChild(listjs2)
@@ -525,7 +528,7 @@
 							link = na.querySelector('a')
 							svg = na.querySelector('[type="image/svg+xml"]')
 							img = na.querySelector('img')
-							src = '../assets/img/image-default.svg'
+							src = '../assets/img/not-available.svg'
 							productBreadcrumb = document.querySelector('.breadcrumb-item.active')
 
 						// Unavailable Title
