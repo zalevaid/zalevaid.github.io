@@ -30,6 +30,7 @@
 		font-family: 'Work Sans', sans-serif;
 		font-size: .875rem;
 		font-weight: 500;
+		overflow-x: hidden;
 	}
 
 	.btn,
