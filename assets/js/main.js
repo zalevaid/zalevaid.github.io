@@ -245,6 +245,30 @@
 					listjs.appendChild(listjs1)
 					setTimeout(function() {
 						listjs.appendChild(listjs2)
+
+						// Category filter from link
+						let url = window.location.href
+
+						if ( url.indexOf('?') > -1 ) {
+
+							// Define URL
+							let urlDetail = url.split('?')
+								urlSplit = urlDetail[1].split('-')
+								words = urlSplit.join(' ')
+								category = words.replace(/\b[a-z]/g, function(a) { return a.toUpperCase() })
+								search = document.querySelector('.search')
+								button = document.querySelector('[data-sort="filter-title"]')
+
+							// Define selected product
+							if ( search !== null ) {
+								search.focus()
+								search.value = category
+								userList.search(category)
+							}
+
+						}
+
+						// Reset button for sorting
 						let button1 = document.querySelector('.list-sort-name')
 							button2 = document.querySelector('.list-sort-size')
 							button3 = document.querySelector('.list-sort-price')
