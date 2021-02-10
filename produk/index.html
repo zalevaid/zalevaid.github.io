@@ -157,14 +157,83 @@
 	</section>
 
 	<section class="my-5">
-		<div class="container">
+		<div class="container" id="filter">
 
 			<div class="text-center mb-4">
 				<h2>Semua Produk</h2>
-				<p class="opacity-5">Reprehenderit laborum in ex duis officia</p>
+				<p class="opacity-5">Tersedia <span class="product-total"></span> produk dari berbagai kategori</p>
 			</div>
-			
-			<div class="row" id="productList">
+
+			<div class="row my-3 pt-3">
+				<div class="col-lg-4 my-3 my-lg-0 order-lg-2">
+					<div class="d-flex align-items-center rounded-3 p-1 searching">
+						<input spellcheck="false" type="search" class="form-control border-0 pe-0 search" placeholder="Apa yang Anda cari ?">
+						<span class="mdi mdi-magnify fs-4 h-auto mx-2"></span>
+					</div>
+				</div>
+				<div class="col-lg my-3 my-lg-0 order-lg-1">
+					<div class="d-lg-flex align-items-lg-center h-100">
+						<div class="mt-n3 mt-lg-0">
+							<div class="btn btn-clear ps-0 cursor-default text-adaptive">Urutkan</div>
+						</div>
+						<div class="d-inline-block my-2 me-2 list-sort-name">
+							<div class="btn btn-clear rounded-3 d-flex align-items-center sort" data-sort="filter-title">
+								<div class="data-sort">
+									<span class="mdi mdi-sort me-2"></span>
+									Nama
+								</div>
+								<div class="data-sort-asc">
+									<span class="mdi mdi-sort-ascending me-2"></span>
+									Nama dari A
+								</div>
+								<div class="data-sort-desc">
+									<span class="mdi mdi-sort-descending me-2"></span>
+									Nama dari Z
+								</div>
+							</div>
+						</div>
+						<div class="d-inline-block my-2 me-2 list-sort-size">
+							<div class="btn btn-clear rounded-3 d-flex align-items-center sort" data-sort="filter-size">
+								<div class="data-sort">
+									<span class="mdi mdi-sort me-2"></span>
+									Ukuran
+								</div>
+								<div class="data-sort-asc">
+									<span class="mdi mdi-sort-ascending me-2"></span>
+									Ukuran Terkecil
+								</div>
+								<div class="data-sort-desc">
+									<span class="mdi mdi-sort-descending me-2"></span>
+									Ukuran Terbesar
+								</div>
+							</div>
+						</div>
+						<div class="d-inline-block my-2 me-2 list-sort-price">
+							<div class="btn btn-clear rounded-3 d-flex align-items-center sort" data-sort="filter-price">
+								<div class="data-sort">
+									<span class="mdi mdi-sort me-2"></span>
+									Harga
+								</div>
+								<div class="data-sort-asc">
+									<span class="mdi mdi-sort-ascending me-2"></span>
+									Harga Termurah
+								</div>
+								<div class="data-sort-desc">
+									<span class="mdi mdi-sort-descending me-2"></span>
+									Harga Termahal
+								</div>
+							</div>
+						</div>
+						<div class="d-inline-block my-2 me-2 list-sort-reset d-none">
+							<div class="btn btn-clear rounded-3 d-flex align-items-center p-0 text-danger">
+								<span class="mdi mdi-close fs-4 h-auto"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="list row" id="productList">
 				<div class="col-6 col-md-4 col-lg-3 product-list">
 					<div class="product my-4">
 						<a class="product-image thumbnail d-block overflow-hidden rounded-3 position-relative bg-white">
@@ -181,15 +250,22 @@
 						</a>
 						<div class="text-break my-3">
 							<a class="product-title text-decoration-none text-dark">
-								<h3 class="fs-5 mb-1"></h3>
+								<h3 class="filter-title fs-5 mb-1"></h3>
 							</a>
-							<p class="product-price mb-1"></p>
+							<p class="product-price filter-price mb-1"></p>
 							<span class="product-category badge rounded-pill text-uppercase px-3 py-2 mt-1"></span>
+							<span class="product-category-size filter-size d-none"></span>
 						</div>
 						<a class="product-link btn btn-dark rounded-3 py-2 px-3 d-lg-none">
 							Lihat Produk
 						</a>
 					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="pagination filter-pagination justify-content-center mt-5"></div>
 				</div>
 			</div>
 
@@ -276,12 +352,12 @@
 	</section>
 </footer>
 
-<section>
+<slot>
 	<!-- Google Analytics -->
-	<section id="script">
+	<section id="gtag">
 		<script defer type="text/javascript">
 			document.addEventListener("DOMContentLoaded", function() {
-				var script = document.getElementById("script")
+				var gtag = document.getElementById("gtag")
 					gtag1 = document.createElement("script")
 					gtag1.type = "text/javascript"
 					gtag1.src = "https://www.googletagmanager.com/gtag/js?id=G-1ZT108TB6N"
@@ -289,10 +365,10 @@
 					gtag2.type = "text/javascript"
 					gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js',new Date()); gtag('config','G-1ZT108TB6N');"
 				setTimeout(function() {
-					script.appendChild(gtag1)
-					script.appendChild(gtag2)
+					gtag.appendChild(gtag1)
+					gtag.appendChild(gtag2)
 				},5000)
-			});
+			})
 		</script>
 	</section>
 	<!-- Progressive Web App -->
@@ -309,8 +385,8 @@
 	<script src="../service-worker.js"></script>
 	<!-- Main -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" defer></script>
-	<script src="../assets/js/main.js" defer></script>
-</section>
+	<script src="../assets/js/main.js"></script>
+</slot>
 
 </body>
 </html>

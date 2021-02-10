@@ -14,6 +14,7 @@
 		--bs-dark-main: #212529;
 		--bs-darkest-main: #16181b;
 
+		--bs-border-light: #dee2e6;
 		--bs-border-dark: #383838;
 
 		--bs-form-focus: #86b7fe;
@@ -190,6 +191,14 @@
 	}
 	.cursor-default {
 		cursor: default;
+	}
+
+/* Button */
+	@media (max-width: 991px) {
+		.btn-dark {
+			background-color: var(--bs-border-dark);
+			border-color: var(--bs-border-dark);
+		}
 	}
 
 /* Typograph */
@@ -431,7 +440,7 @@
 		border-top-width: 1px;
 	}
 
-/* Pagin */
+/* Pagination */
 	.page-link,
 	.page-link:focus {
 		color: var(--bs-dark);
@@ -522,6 +531,61 @@
 	.modal .carousel-control-next-icon,
 	.modal .carousel-control-prev-icon {
 		filter: initial;
+	}
+
+/* List.js */
+	[data-sort] .data-sort,
+	[data-sort] .data-sort-asc,
+	[data-sort] .data-sort-desc,
+	[data-sort].asc .data-sort-asc,
+	[data-sort].desc .data-sort-desc {
+		display: flex;
+		align-items: center;
+	}
+	[data-sort].asc .data-sort,
+	[data-sort].desc .data-sort,
+	[data-sort] .data-sort-asc,
+	[data-sort] .data-sort-desc {
+		display: none;
+	}
+	.searching {
+		background-color: var(--bs-white);
+		border: 1px solid var(--bs-border-light);
+	}
+	.sort {
+		border: 1px solid var(--bs-border-light);
+	}
+	.sort.asc,
+	.sort.desc {
+		color: var(--bs-white);
+		background-color: var(--bs-primary);
+		border-color: var(--bs-primary);
+	}
+	.filter-pagination li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.filter-pagination li:only-child {
+		display: none;
+	}
+	.filter-pagination li:not(:last-child) {
+		margin-right: .5rem;
+	}
+	.filter-pagination li a {
+		text-decoration: none;
+		color: var(--bs-dark);
+		padding: .4rem .75rem;
+		border-radius: .35rem;
+		cursor: pointer;
+	}
+	.filter-pagination li.active a {
+		color: var(--bs-white);
+		background-color: var(--bs-primary);
+	}
+	.filter-pagination li.active,
+	.filter-pagination li.disabled {
+		pointer-events: none;
 	}
 
 /* Variant */
@@ -703,4 +767,17 @@
 	}
 	.dark .card {
 		color: var(--bs-dark);
+	}
+	.dark .sort {
+		color: var(--bs-white);
+		border-color: var(--bs-border-dark);
+	}
+	.dark .searching {
+		border-color: var(--bs-border-dark);
+	}
+	.dark .searching .mdi {
+		color: var(--bs-dark);
+	}
+	.dark .filter-pagination li a {
+		color: var(--bs-white) !important;
 	}

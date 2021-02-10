@@ -190,6 +190,11 @@
 					}
 
 					productCategory.classList.add(badge)
+
+					let categoryName = category.split(' ')
+						categorySize = categoryName[categoryName.length - 1]
+						categoriesSize = document.querySelector('.product-category-size')
+					if ( categoriesSize !== null ) categoriesSize.innerText = categorySize
 				}
 
 				// Product Image
@@ -207,10 +212,16 @@
 				}
 
 				// Product Link
-				let link = '/produk/detail?' + id
+				let encode = title.toLowerCase().split(' ').join('-')
+					link = '/produk/detail?' + id + '&' + encode
 				if ( productTitle !== null ) productTitle.href = link
 				if ( productImage !== null ) productImage.href = link
 				if ( productLink !== null ) productLink.href = link
+
+				// Total Product
+				let total = Object.keys(product).length
+					productTotal = document.querySelector('.product-total')
+				if ( productTotal !== null ) productTotal.innerText = total
 
 			}
 
@@ -219,13 +230,50 @@
 				let template = document.querySelector('.product-list:last-child')
 				template.remove(template)
 			}
+
+			// List.js
+			document.addEventListener('DOMContentLoaded', function() {
+				var listjs = document.getElementById('filter')
+					listjs1 = document.createElement('script')
+					listjs1.src = 'https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js'
+					listjs2 = document.createElement('script')
+					listjs2.innerHTML = 'var userList = new List("filter", { valueNames: ["filter-title", "filter-price", "filter-size"], page: 8, pagination: [{ paginationClass: "filter-pagination", left: 2, right: 2, item: `<li><a class="page" onclick="hrefPagin()"></a></li>` }] })'
+				listjs.appendChild(listjs1)
+				setTimeout(function() {
+					listjs.appendChild(listjs2)
+					let button1 = document.querySelector('.list-sort-name')
+						button2 = document.querySelector('.list-sort-size')
+						button3 = document.querySelector('.list-sort-price')
+						reset = document.querySelector('.list-sort-reset')
+					button1.onclick = function(e) { reset.classList.remove('d-none') }
+					button2.onclick = function(e) { reset.classList.remove('d-none') }
+					button3.onclick = function(e) { reset.classList.remove('d-none') }
+					reset.onclick = function(e) {
+						reset.classList.add('d-none')
+						button1.querySelector('.sort').classList.remove('asc')
+						button2.querySelector('.sort').classList.remove('asc')
+						button3.querySelector('.sort').classList.remove('asc')
+						button1.querySelector('.sort').classList.remove('desc')
+						button2.querySelector('.sort').classList.remove('desc')
+						button3.querySelector('.sort').classList.remove('desc')
+					}
+				},1000)
+			})
+			function hrefPagin() {
+				window.scroll({
+					top: 180
+				})
+			}
 		}
 
 		// Product detail
 		if ( document.querySelector('#productDetail') !== null ) {
 			// Define product ID
 			let url = window.location.href
-				urlID = url.split('?')
+				urlDetail = url.split('?')
+				urlSplit = urlDetail[1].split('&')
+				urlID = urlSplit[0]
+				urlTitle = urlSplit[1]
 
 			if ( url.indexOf('?') > -1 ) {
 				// Loop JSON data
@@ -234,7 +282,7 @@
 					let lastItem = product[product.length - 1]
 
 					// Define selected product
-					if ( product[i].id == urlID[1] ) {
+					if ( product[i].id == urlID ) {
 
 						// Remove Template
 						let pu = document.querySelector('#productUnavailable')
