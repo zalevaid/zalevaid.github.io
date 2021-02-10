@@ -668,6 +668,10 @@
 		height: 175px;
 	}
 
+	#productUnavailable img {
+		max-width: 300px;
+	}
+
 /* Dark Mode */
 	.transition-on,
 	.transition-on .navbar-light,
