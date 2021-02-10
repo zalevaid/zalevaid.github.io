@@ -759,6 +759,21 @@
 				}
 			}
 
+			// Masonry.js
+			if ( document.querySelector('#grid') !== null ) {
+				document.addEventListener('DOMContentLoaded', function() {
+					var masonry = document.getElementById('grid')
+						masonry1 = document.createElement('script')
+						masonry1.src = 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js'
+						masonry2 = document.createElement('script')
+						masonry2.innerHTML = 'var msnry = new Masonry("#grid")'
+					masonry.appendChild(masonry1)
+					setTimeout(function() {
+						masonry.appendChild(masonry2)
+					},1000)
+				})
+			}
+
 		}
 
 		// Remove DOM element that used as duplicate template
