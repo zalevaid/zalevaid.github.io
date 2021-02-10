@@ -701,6 +701,64 @@
 		templateIndicator.remove(templateIndicator)
 	}
 
+	if ( document.querySelector('#testimonialData') !== null ) {
+		// Parse JSON data
+		var testi = JSON.parse(testimoni)
+
+		// Loop JSON data
+		for (let i = 0; i < testi.length; i++) {
+
+			// Define JSON data
+			let name = testi[i].name
+				address = testi[i].address
+				content = testi[i].content
+				jpg = testi[i].image.jpg
+				webp = testi[i].image.webp
+
+			// Duplicate DOM element
+			let list = document.querySelector('.testi-list')
+				cloneList = list.cloneNode(true)
+			list.after(cloneList)
+
+			// ------------------------------------------------------
+			// Fill in JSON data to DOM element
+			// ------------------------------------------------------
+
+			// Define Selector
+			let testiName = document.querySelector('.testi-name')
+				testiAddress = document.querySelector('.testi-address')
+				testiContent = document.querySelector('.testi-content')
+				testiImage = document.querySelector('.testi-image')
+
+			// Testimonial Name
+			if ( testiName !== null ) testiName.innerText = name
+
+			// Testimonial Address
+			if ( testiAddress !== null ) testiAddress.innerText = address
+
+			// Testimonial Content
+			if ( testiContent !== null ) testiContent.innerText = content
+
+			// Testimonial Image
+			if ( testiImage !== null ) {
+				let img = testiImage.querySelector('img')
+					origin = 'https://drive.google.com/uc?export=view&id='
+				if ( img !== null ) {
+					testiImage.querySelector('[type="webp"]').srcset = origin + webp + ' 1x, ' + origin + webp + ' 2x'
+					testiImage.querySelector('[type="jpg"]').srcset = origin + jpg + ' 1x, ' + origin + jpg + ' 2x'
+					img.srcset = origin + jpg + ' 1x, ' + origin + jpg + ' 2x'
+					img.src = origin + jpg
+					img.alt = 'Foto ' + name
+				}
+			}
+
+		}
+
+		// Remove DOM element that used as duplicate template
+		let template = document.querySelector('.testi-list:last-child')
+		template.remove(template)
+	}
+
 // Banner
 	if ( document.querySelector('#bannerData') !== null ) {
 		// Parse JSON data
