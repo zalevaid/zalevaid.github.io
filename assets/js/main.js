@@ -274,12 +274,14 @@
 		if ( document.querySelector('#productDetail') !== null ) {
 			// Define product ID
 			let url = window.location.href
-				urlDetail = url.split('?')
-				urlSplit = urlDetail[1].split('&')
-				urlID = urlSplit[0]
-				urlTitle = urlSplit[1]
 
 			if ( url.indexOf('?') > -1 ) {
+				// Define URL
+				let urlDetail = url.split('?')
+					urlSplit = urlDetail[1].split('&')
+					urlID = urlSplit[0]
+					urlTitle = urlSplit[1]
+
 				// Loop JSON data
 				for (let i = 0; i < product.length; i++) {
 					// Define last item
