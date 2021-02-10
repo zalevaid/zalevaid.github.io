@@ -635,6 +635,13 @@
 		// Parse JSON data
 		var testi = JSON.parse(testimoni)
 
+		// Testimonial latest
+		if ( document.querySelector('#testimonyLatest') !== null ) {
+			var testi = testi.filter(function(el, index) {
+				return index >= testi.length - 3
+			})
+		}
+
 		// Loop JSON data
 		for (let i = 0; i < testi.length; i++) {
 
@@ -717,8 +724,8 @@
 
 			// Duplicate DOM element
 			let list = document.querySelector('.testi-list')
-				cloneList = list.cloneNode(true)
-			list.after(cloneList)
+				clone = list.cloneNode(true)
+			list.after(clone)
 
 			// ------------------------------------------------------
 			// Fill in JSON data to DOM element
