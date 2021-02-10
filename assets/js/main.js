@@ -245,10 +245,12 @@
 						let button1 = document.querySelector('.list-sort-name')
 							button2 = document.querySelector('.list-sort-size')
 							button3 = document.querySelector('.list-sort-price')
+							search = document.querySelector('.search')
 							reset = document.querySelector('.list-sort-reset')
 						button1.onclick = function(e) { reset.classList.remove('d-none') }
 						button2.onclick = function(e) { reset.classList.remove('d-none') }
 						button3.onclick = function(e) { reset.classList.remove('d-none') }
+						search.oninput = function(e) { reset.classList.add('d-none') }
 						reset.onclick = function(e) {
 							reset.classList.add('d-none')
 							button1.querySelector('.sort').classList.remove('asc')
