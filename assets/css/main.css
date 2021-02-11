@@ -206,6 +206,12 @@
 		background-color: #404040;
 		border-color: #404040;
 	}
+	.btn-dark:hover,
+	.btn-dark:focus,
+	.btn-dark:active {
+		background-color: #2d2d2d;
+		border-color: #2d2d2d;
+	}
 
 /* Typograph */
 	h1, h2, h3, h4, h5, h6 {
@@ -558,6 +564,10 @@
 		background-color: var(--bs-white);
 		border: 1px solid var(--bs-border-light);
 	}
+	.searching label {
+		position: absolute;
+		z-index: -1;
+	}
 	.sort {
 		border: 1px solid var(--bs-border-light);
 	}
@@ -639,8 +649,18 @@
 	.thumbnail .btn {
 		padding: .75rem 1.5rem;
 		opacity: 0;
-		transition: opacity .25s ease;
+		transition: all .25s ease;
 		z-index: 1;
+	}
+	.thumbnail .btn-dark {
+		background-color: #333;
+	}
+	.thumbnail .btn-dark:hover {
+		background-color: #2a2a2a;
+	}
+	.thumbnail:hover .btn,
+	.thumbnail:hover .btn:hover {
+		transition: all .25s ease;
 	}
 	@media (min-width: 992px) {
 		.thumbnail img,
@@ -653,7 +673,6 @@
 		}
 		.thumbnail:hover .btn {
 			opacity: 1;
-			transition: opacity .25s ease;
 		}
 		.thumbnail img {
 			height: 200px
