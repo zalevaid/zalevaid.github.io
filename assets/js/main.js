@@ -221,6 +221,10 @@
 				if ( productImage !== null ) productImage.href = link
 				if ( productLink !== null ) productLink.href = link
 
+				// Release filter
+				let productRelease = document.querySelector('.product-release')
+				if ( productRelease !== null ) productRelease.innerText = i + 1
+
 				// Total Product
 				let total = Object.keys(product).length
 					productTotal = document.querySelector('.product-total')
@@ -241,7 +245,7 @@
 						listjs1 = document.createElement('script')
 						listjs1.src = 'https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js'
 						listjs2 = document.createElement('script')
-						listjs2.innerHTML = 'var userList = new List("filter", { valueNames: ["filter-title", "filter-price", "filter-label", "filter-size"], page: 8, pagination: [{ paginationClass: "filter-pagination", left: 2, right: 2, item: `<li><a class="page" onclick="hrefPagin()"></a></li>` }] })'
+						listjs2.innerHTML = 'var listProduct = new List("filter", { valueNames: ["filter-title", "filter-price", "filter-label", "filter-size", "filter-release"], page: 8, pagination: [{ paginationClass: "filter-pagination", left: 2, right: 2, item: `<li><a class="page" onclick="hrefPagin()"></a></li>` }] })'
 					listjs.appendChild(listjs1)
 					setTimeout(function() {
 						listjs.appendChild(listjs2)
@@ -263,29 +267,61 @@
 							if ( search !== null ) {
 								search.focus()
 								search.value = category
-								userList.search(category)
+								listProduct.search(category)
 							}
 
 						}
 
-						// Reset button for sorting
+						// Filter and sorting button
 						let button1 = document.querySelector('.list-sort-name')
 							button2 = document.querySelector('.list-sort-size')
 							button3 = document.querySelector('.list-sort-price')
 							search = document.querySelector('.search')
-							reset = document.querySelector('.list-sort-reset')
-						button1.onclick = function(e) { reset.classList.remove('d-none') }
-						button2.onclick = function(e) { reset.classList.remove('d-none') }
-						button3.onclick = function(e) { reset.classList.remove('d-none') }
-						search.oninput = function(e) { reset.classList.add('d-none') }
-						reset.onclick = function(e) {
-							reset.classList.add('d-none')
+							resetSort = document.querySelector('.list-sort-reset')
+							resetFilter = document.querySelector('.list-filter-reset')
+							result = document.querySelector('#searchResult')
+
+						button1.onclick = function(e) { resetSort.classList.remove('d-none') }
+						button2.onclick = function(e) { resetSort.classList.remove('d-none') }
+						button3.onclick = function(e) { resetSort.classList.remove('d-none') }
+
+						resetSort.onclick = function(e) {
+							listProduct.sort('filter-release', { order: 'desc' })
+							resetSort.classList.add('d-none')
 							button1.querySelector('.sort').classList.remove('asc')
 							button2.querySelector('.sort').classList.remove('asc')
 							button3.querySelector('.sort').classList.remove('asc')
 							button1.querySelector('.sort').classList.remove('desc')
 							button2.querySelector('.sort').classList.remove('desc')
 							button3.querySelector('.sort').classList.remove('desc')
+						}
+
+						resetFilter.onclick = function(e) {
+							listProduct.sort('filter-release', { order: 'desc' })
+							resetSort.classList.add('d-none')
+							button1.querySelector('.sort').classList.remove('asc')
+							button2.querySelector('.sort').classList.remove('asc')
+							button3.querySelector('.sort').classList.remove('asc')
+							button1.querySelector('.sort').classList.remove('desc')
+							button2.querySelector('.sort').classList.remove('desc')
+							button3.querySelector('.sort').classList.remove('desc')
+							search.value = ''
+							listProduct.search()
+							result.classList.add('d-none')
+						}
+
+						search.oninput = function(e) {
+							resetSort.classList.add('d-none')
+							if ( this.value == '' ) {
+								result.classList.add('d-none')
+							} else {
+								result.classList.remove('d-none')
+								result.querySelector('strong').innerText = this.value
+								listProduct.on('searchComplete', function() {
+									let resultTotal = listProduct.update().matchingItems.length
+									result.querySelector('span').innerText = resultTotal
+								})
+							}
 						}
 					},1000)
 				})
@@ -313,9 +349,11 @@
 				for (let i = 0; i < product.length; i++) {
 					// Define last item
 					let lastItem = product[product.length - 1]
+						detailID = product[i].id
+						detailTitle = product[i].title
 
 					// Define selected product
-					if ( product[i].id == urlID ) {
+					if ( detailID == urlID && detailTitle.toLowerCase().split(' ').join('-') == urlTitle ) {
 
 						// Remove Template
 						let pu = document.querySelector('#productUnavailable')
@@ -522,9 +560,10 @@
 						let phone = '6287838610808'
 							waTo = 'https://wa.me/' + phone + '?text='
 							waMsg = 'Hai kak... Saya sedang mencari sprei yang cocok di Zaleva, dan saya tertarik dengan '
-							link = window.location.href.split(':').join('%3A').split('/').join('%2F').split('?').join('%3F').split('#').join('%23')
-							content = waTo + waMsg + '_*' + title + '*_' + ' - ' + link
+							link = window.location.href.split(':').join('%3A').split('/').join('%2F').split('?').join('%3F').split('&').join('%26')
+							content = waTo + waMsg + '_*' + title + ' (' + id + ')*_' + ' - ' + link
 							encode = content.split(' ').join('%20')
+
 						if ( productWhatsapp !== null ) productWhatsapp.href = encode
 
 						// Instagram
@@ -535,7 +574,7 @@
 
 						break
 
-					} else if ( product[i].id == lastItem.id ) {
+					} else if ( detailID == lastItem.id ) {
 
 						// Remove Template
 						let pa = document.querySelector('#productAvailable')

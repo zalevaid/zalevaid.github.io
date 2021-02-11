@@ -114,6 +114,9 @@
 	.bg-warning {
 		background-color: var(--bs-warning) !important;
 	}
+	.bg-light {
+		background-color: rgba(0,0,0,.03) !important;
+	}
 
 	.bg-purple {
 		background-color: var(--bs-purple);
@@ -192,6 +195,10 @@
 	}
 	.cursor-default {
 		cursor: default;
+	}
+
+	.pointer-events-none {
+		pointer-events: none;
 	}
 
 /* Button */
@@ -726,6 +733,9 @@
 	.dark .navbar-light .navbar-toggler,
 	.dark .navbar .btn-clear {
 		color: var(--bs-white);
+	}
+	.dark .bg-light {
+		background-color: rgba(255,255,255,.05) !important;
 	}
 	.dark .text-dark:not(.bg-warning) {
 		color: var(--bs-white) !important;
