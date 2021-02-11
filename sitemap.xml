@@ -19,4 +19,16 @@
 		<priority>0.8</priority>
 	</url>
 
+	<url>
+		<loc>https://zalevastore.com/testimoni</loc>
+		<lastmod>2021-02-07T00:14:30+07:00</lastmod>
+		<priority>0.8</priority>
+	</url>
+
+	<url>
+		<loc>https://zalevastore.com/promo</loc>
+		<lastmod>2021-02-07T00:14:30+07:00</lastmod>
+		<priority>0.8</priority>
+	</url>
+
 </urlset>

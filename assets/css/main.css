@@ -202,11 +202,9 @@
 	}
 
 /* Button */
-	@media (max-width: 991px) {
-		.btn-dark {
-			background-color: var(--bs-border-dark);
-			border-color: var(--bs-border-dark);
-		}
+	.btn-dark {
+		background-color: #404040;
+		border-color: #404040;
 	}
 
 /* Typograph */
@@ -742,10 +740,6 @@
 	}
 	.dark .navbar .btn-wa {
 		color: var(--bs-green);
-	}
-	.dark .product > .btn-dark {
-		color: var(--bs-dark);
-		background-color: var(--bs-white);
 	}
 	.dark .category .text-dark {
 		color: var(--bs-dark) !important;
