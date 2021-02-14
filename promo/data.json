@@ -1,0 +1,30 @@
+promosi =`[
+	{
+		"id"			: "01042021",
+		"title"			: "Promo Lebaran",
+		"subtitle"		: "Agar sanak saudara yang mudik di Lebaran tahun ini dapat beristirahat dengan nyaman",
+		"description"	: "Lorem ipsum quis cillum mollit minim commodo eiusmod consequat do commodo incididunt enim mollit. Ut duis eiusmod nostrud laborum duis ex dolor irure consectetur officia dolore labore id aliquip ullamco. Proident eiusmod do nulla elit cillum pariatur ut mollit occaecat laborum esse et incididunt dolore et quis ut.",
+		"period"		: "1 April 2021 - 13 Mei 2021",
+		"image"			: {
+			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
+			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
+		},
+		"link"			: {
+			"instagram"	: "CKlc8p1J_EW"
+		}
+	},
+	{
+		"id"			: "10112021",
+		"title"			: "Promo Cuci Gudang",
+		"subtitle"		: "Menjelang akhir tahun, Zaleva mengadakan Promo Cuci Gudang",
+		"description"	: "Id adipisicing ea ut aliqua dolor exercitation consectetur sint aliqua incididunt sit ex tempor sit mollit. Consequat aliqua ut in ut consequat adipisicing officia sed excepteur mollit irure dolore incididunt dolor adipisicing consequat esse.",
+		"period"		: "1 November 2021 - 31 Desember 2021",
+		"image"			: {
+			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
+			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
+		},
+		"link"			: {
+			"instagram"	: "CKlc8p1J_EW"
+		}
+	}
+]`

@@ -6,6 +6,6 @@ Allow: /
 Allow: /produk
 Allow: /produk/detail
 Allow: /testimoni
+Allow: /promo
 
-Disallow: /promo
 Disallow: /test

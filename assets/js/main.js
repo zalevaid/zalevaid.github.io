@@ -70,6 +70,18 @@
 		}
 	}
 
+// Meta
+	var head = document.querySelector('head')
+		headTitle = head.querySelector('title')
+		metaTitle = head.querySelector('[name="title"]')
+		metaDesc = head.querySelector('[name="description"]')
+		metaURL = head.querySelector('[rel="canonical"]')
+		ogTitle = head.querySelector('[property="og:title"]')
+		ogDesc = head.querySelector('[property="og:description"]')
+		ogURL = head.querySelector('[property="og:url"]')
+		ogImage = head.querySelector('[property="og:image"]')
+		twImage = head.querySelector('[property="twitter:image"]')
+
 // Slider
 	if ( document.querySelector('#sliderData') !== null ) {
 		// Parse JSON data
@@ -379,6 +391,21 @@
 						// ------------------------------------------------------
 						// Fill in JSON data to DOM element
 						// ------------------------------------------------------
+
+						// Head Meta
+						let hmf = ' dari '
+							hms = ' | '
+							hmi = 'https://drive.google.com/uc?export=view&id=' + jpg0
+							hmd = 'Minat? Hubungi kami via WA 0878 3861 0808'
+						headTitle.innerText = title + hmf + headTitle.innerText
+						metaTitle.content = title + hmf + metaTitle.content
+						metaDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
+						metaURL.href = url
+						ogTitle.content = title + hmf + ogTitle.content
+						ogDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
+						ogURL.content = url
+						ogImage.content = hmi
+						twImage.content = hmi
 
 						// Define Selector
 						let productID = document.querySelector('.product-id')
@@ -894,4 +921,162 @@
 		// Remove DOM element that used as duplicate template
 		let template = document.querySelector('.banner-list:last-child')
 		template.remove(template)
+	}
+
+// Promo
+	if ( document.querySelector('#promoData') !== null ) {
+		// Parse JSON data
+		var promo = JSON.parse(promosi)
+
+		// Define promo title
+		let url = window.location.href
+
+		if ( url.indexOf('?') > -1 ) {
+			// Define URL
+			let urlDetail = url.split('?')
+				urlSplit = urlDetail[1].split('&')
+				urlID = urlSplit[0]
+				urlTitle = urlSplit[1]
+
+			// Loop JSON data
+			for (let i = 0; i < promo.length; i++) {
+				// Define last item
+				let lastItem = promo[promo.length - 1]
+					detailID = promo[i].id
+					detailTitle = promo[i].title
+
+				// Define selected promo
+				if ( detailID == urlID && detailTitle.toLowerCase().split(' ').join('-') == urlTitle ) {
+
+					// Remove Template
+					let pu = document.querySelector('#promoUnavailable')
+					if ( pu !== null ) pu.remove(pu)
+
+					// Define JSON data
+					let title = promo[i].title
+						subtitle = promo[i].subtitle
+						description = promo[i].description
+						period = promo[i].period
+						jpg = promo[i].image.jpg
+						webp = promo[i].image.webp
+						instagram = promo[i].link.instagram
+
+					// ------------------------------------------------------
+					// Fill in JSON data to DOM element
+					// ------------------------------------------------------
+
+					// Head Meta
+					let hms = ' '
+						hmi = 'https://drive.google.com/uc?export=view&id=' + jpg
+					headTitle.innerText = title + hms + headTitle.innerText
+					metaTitle.content = title + hms + metaTitle.content
+					metaDesc.content = subtitle + hms + metaDesc.content
+					metaURL.href = url
+					ogTitle.content = title + hms + ogTitle.content
+					ogDesc.content = subtitle + hms + ogDesc.content
+					ogURL.content = url
+					ogImage.content = hmi
+					twImage.content = hmi
+
+					// Define Selector
+					let promoTitle = document.querySelector('.promo-title')
+						promoDesc = document.querySelector('.promo-description')
+						promoPeriod = document.querySelector('.promo-period')
+						promoImage = document.querySelector('.promo-image')
+						promoWhatsapp = document.querySelector('.promo-whatsapp')
+						promoInstagram = document.querySelector('.promo-instagram')
+						promoBreadcrumb = document.querySelector('.breadcrumb-item.active')
+
+					// Promo Title
+					if ( promoTitle.querySelector('h2') !== null ) promoTitle.querySelector('h2').innerText = title
+
+					// Promo Subtitle
+					if ( promoTitle.querySelector('p') !== null ) promoTitle.querySelector('p').innerText = subtitle
+
+					// Promo Description
+					if ( promoDesc !== null ) promoDesc.innerText = description
+
+					// Promo Period
+					if ( promoPeriod !== null ) promoPeriod.innerText = period
+
+					// Promo Image
+					if ( promoImage !== null ) {
+						let img = promoImage.querySelector('img')
+							origin = 'https://drive.google.com/uc?export=view&id='
+						if ( img !== null ) {
+							promoImage.querySelector('[type="webp"]').srcset = origin + webp + ' 1x, ' + origin + webp + ' 2x'
+							promoImage.querySelector('[type="jpg"]').srcset = origin + jpg + ' 1x, ' + origin + jpg + ' 2x'
+							img.srcset = origin + jpg + ' 1x, ' + origin + jpg + ' 2x'
+							img.src = origin + jpg
+							img.alt = title
+						}
+					}
+
+					// WhatsApp
+					let phone = '6287838610808'
+						waTo = 'https://wa.me/' + phone + '?text='
+						waMsg = 'Hai kak... Saya lihat ada promo di Zaleva, dan saya mau mengambil '
+						link = window.location.href.split(':').join('%3A').split('/').join('%2F').split('?').join('%3F').split('&').join('%26')
+						content = waTo + waMsg + '_*' + title + '*_' + ' - ' + link
+						encode = content.split(' ').join('%20')
+
+					if ( promoWhatsapp !== null ) promoWhatsapp.href = encode
+
+					// Instagram
+					if ( promoInstagram !== null ) promoInstagram.href = 'https://www.instagram.com/p/' + instagram
+
+					// Breadcrumb
+					if ( promoBreadcrumb !== null ) promoBreadcrumb.innerText = title
+
+					break
+
+				} else if ( detailID == lastItem.id ) {
+
+					// Remove Template
+					let pa = document.querySelector('#promoAvailable')
+					if ( pa !== null ) pa.remove(pa)
+
+					break
+
+				} else {
+
+					// Define Selector
+					let na = document.querySelector('#promoUnavailable')
+						title = na.querySelector('h2')
+						desc = na.querySelector('p')
+						link = na.querySelector('a')
+						svg = na.querySelector('[type="image/svg+xml"]')
+						img = na.querySelector('img')
+						src = '../assets/img/not-available.svg'
+						promoBreadcrumb = document.querySelector('.breadcrumb-item.active')
+
+					// Unavailable Title
+					if ( title !== null ) title.innerText = 'Maaf...'
+
+					// Unavailable Description
+					if ( desc !== null ) desc.innerText = 'Promo yang Anda cari tidak tersedia, silakan kembali ke beranda.'
+
+					// Unavailable Button
+					if ( link !== null ) {
+						link.href = '/'
+						link.innerText = 'Kembali'
+						link.classList.add('btn-primary')
+					}
+
+					// Unavailable Image
+					if ( img !== null ) {
+						svg.srcset = src + ' 1x, ' + src + ' 2x'
+						img.srcset = src + ' 1x, ' + src + ' 2x'
+						img.src = src
+						img.alt = 'Promo tidak tersedia'
+					}
+
+					// Breadcrumb
+					if ( promoBreadcrumb !== null ) promoBreadcrumb.innerText = 'Tidak Tersedia'
+
+				}
+			}
+		} else {
+			window.location.href = '/'
+		}
 	}

@@ -693,7 +693,8 @@
 		height: 175px;
 	}
 
-	#productUnavailable img {
+	#productUnavailable img,
+	#promoUnavailable img {
 		max-width: 300px;
 	}
 

@@ -1,22 +1,22 @@
 banner =`[
 	{
-		"title"		: "Banner 1",
+		"title"		: "Promo Lebaran",
 		"image"		: {
 			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
 			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
 		},
 		"link"		: {
-			"detail"	: "link-1"
+			"detail"	: "promo/?01042021&promo-lebaran"
 		}
 	},
 	{
-		"title"		: "Banner 2",
+		"title"		: "Promo Cuci Gudang",
 		"image"		: {
 			"jpg"		: "1kNSEpVxnTh6hZLd6sU74RF2IXz4GCgcu",
 			"webp"		: "1_tlY6Zt4gKcapssCrGrz3RYyKetJPgeE"
 		},
 		"link"		: {
-			"detail"	: "link-2"
+			"detail"	: "promo/?10112021&promo-cuci-gudang"
 		}
 	}
 ]`
