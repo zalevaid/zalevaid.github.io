@@ -393,19 +393,19 @@
 						// ------------------------------------------------------
 
 						// Head Meta
-						// let hmf = ' dari '
-						// 	hms = ' | '
-						// 	hmi = 'https://drive.google.com/uc?export=view&id=' + jpg0
-						// 	hmd = 'Minat? Hubungi kami via WA 0878 3861 0808'
-						// headTitle.innerText = title + hmf + headTitle.innerText
-						// metaTitle.content = title + hmf + metaTitle.content
-						// metaDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
-						// metaURL.href = url
-						// ogTitle.content = title + hmf + ogTitle.content
-						// ogDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
-						// ogURL.content = url
-						// ogImage.content = hmi
-						// twImage.content = hmi
+						let hmf = ' dari '
+							hms = ' | '
+							hmi = 'https://drive.google.com/uc?export=view&id=' + jpg0
+							hmd = 'Minat? Hubungi kami via WA 0878 3861 0808'
+						headTitle.innerText = title + hmf + headTitle.innerText
+						metaTitle.content = title + hmf + metaTitle.content
+						metaDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
+						metaURL.href = url
+						ogTitle.content = title + hmf + ogTitle.content
+						ogDesc.content = title + ' (' + category + '). Harga ' + price + hms + hmd
+						ogURL.content = url
+						ogImage.content = hmi
+						twImage.content = hmi
 
 						// Define Selector
 						let productID = document.querySelector('.product-id')
